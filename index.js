@@ -16,13 +16,11 @@ function generateRandomPassword(length) {
   let password = "";
   const characters =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  //for (let i = 0; i < length; i++)
-  for (let item of characters) {
-    let index = Math.floor(Math.random() * characters.length) + 1;
+   for (let i = 0; i < length; i++) {
+    let index = Math.floor(Math.random() * characters.length);
     let value = characters.charAt(index);
     password += value;
   }
-
   return password;
 }
 
